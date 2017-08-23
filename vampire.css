@@ -11,6 +11,7 @@ body {
 
 .vampire-box__bg {
   margin: 0 auto;
+  overflow: hidden;
   width: 500px;
   height: 500px;
   border-radius: 100%;
@@ -31,5 +32,72 @@ body {
   box-shadow: 0 0 5px white, 0 0 10px #1E2D49, 0 0 90px white;
   top: 70px;
   left: 340px; }
+.vampire-box__bg .bat {
+  left: 300px;
+  top: 160px; }
+  .vampire-box__bg .bat .bat__left-wing {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 60px solid #131313;
+    position: absolute;
+    bottom: -10px;
+    left: 40px;
+    transform: rotate(-60deg);
+    transform-origin: left bottom;
+    left: 70px;
+    bottom: 0px;
+    transition: all ease 0.7s; }
+  .vampire-box__bg .bat .bat__body {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 80%;
+    background-color: #131313;
+    left: 70px;
+    bottom: 5px; }
+    .vampire-box__bg .bat .bat__body:before {
+      content: ' ';
+      width: 0;
+      height: 0;
+      border-left: 4px solid transparent;
+      border-right: 4px solid transparent;
+      border-bottom: 10px solid #131313;
+      transform: rotate(0deg);
+      position: absolute;
+      left: 2px;
+      top: -5px; }
+    .vampire-box__bg .bat .bat__body:after {
+      content: ' ';
+      width: 0;
+      height: 0;
+      border-left: 4px solid transparent;
+      border-right: 4px solid transparent;
+      border-bottom: 10px solid #131313;
+      transform: rotate(0deg);
+      position: absolute;
+      left: 9px;
+      top: -5px; }
+  .vampire-box__bg .bat .bat__right-wing {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 60px solid #131313;
+    transform: rotate(60deg);
+    position: absolute;
+    left: 100px;
+    bottom: -10px;
+    transform-origin: left bottom;
+    left: 82px;
+    bottom: 15px;
+    transition: all ease 0.7s; }
+.vampire-box__bg .bat.bat--two {
+  left: 22px;
+  top: 110px; }
+.vampire-box__bg .bat.bat--three {
+  left: 213px;
+  top: 126px; }
 
 /*# sourceMappingURL=vampire.css.map */
