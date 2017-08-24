@@ -114,5 +114,59 @@ body{
          top: 126px;  
         }
     }
-    
+    .vampire{
+        .vampire__hair{
+            background-color:#212129;
+            width: 126px;
+            height: 200px;
+            border-radius: 100px 100px 10px 10px;
+            left: 200px;
+            top: 200px;
+            overflow: hidden;
+            .hair__one{
+                    top: 5px;
+                    left: -4px;
+                    width: 97px;
+                    height: 30px;
+                    // background: #26262E;
+                    background-color: #212129;
+                    border-radius: 100%;
+                    transform: rotate(-50deg);
+                    z-index: 5;
+                }
+             
+            .hair__two{
+                    top: 8px;
+                    left: 54px;
+                    width: 116px;
+                    height: 44px;
+                    // background: #26262E;
+                    background-color: #212129;
+                    border-radius: 100%;
+                    transform: rotate(32deg);   
+                    z-index: 5;              
+            }
+            .hair__three{
+                top: 22px;
+                left: 27px;
+                width: 66px;
+                height: 18px;
+                background-color: #212129;
+                border-radius: 100%;
+                transform: rotate(133deg);
+                z-index: 5;            
+            }    
+        }  
+        .vampire__face{
+            background-color: #DBDBDB;
+            width: 80px;
+            height: 100px;
+            border-radius: 50px;
+            top: 219px;
+            left: 224px;
+            z-index: 3;
+        }     
+    }
 }
+    
+    
