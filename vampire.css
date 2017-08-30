@@ -137,7 +137,7 @@ body {
 .vampire-box__bg .vampire .vampire__face {
   background-color: #DBDBDB;
   width: 80px;
-  height: 100px;
+  height: 106px;
   border-radius: 50px;
   top: 219px;
   left: 224px;
@@ -147,7 +147,7 @@ body {
     height: 20px;
     border-radius: 0 50px 0 50px;
     background-color: #fff;
-    box-shadow: 0 0 14px #04032B; }
+    box-shadow: 0 0 14px 5px #04032B; }
     .vampire-box__bg .vampire .vampire__face .eyes.eyes--left {
       top: 38px;
       transform: scale(1, 1, 1);
@@ -217,5 +217,31 @@ body {
       border-top: transparent;
       border-bottom: transparent;
       transform: rotate(180deg); }
+  .vampire-box__bg .vampire .vampire__face .vampire__mouth .lip.lip--top {
+    top: 7px;
+    left: 0px; }
+  .vampire-box__bg .vampire .vampire__face .vampire__mouth .lip .upper-lip {
+    border-bottom: 10px solid #880901;
+    border-left: 20px solid transparent;
+    border-top-right-radius: 100%;
+    height: 0px;
+    width: 0px; }
+    .vampire-box__bg .vampire .vampire__face .vampire__mouth .lip .upper-lip.upper-lip--left {
+      top: 70px;
+      left: 21px; }
+    .vampire-box__bg .vampire .vampire__face .vampire__mouth .lip .upper-lip.upper-lip--right {
+      top: 70px;
+      left: 41px;
+      transform: rotateY(180deg); }
+  .vampire-box__bg .vampire .vampire__face .vampire__mouth .lip.lip--bottom {
+    width: 38px;
+    height: 8px;
+    background-color: #880901;
+    border-top-left-radius: 80px;
+    border-top-right-radius: 80px;
+    border-bottom: 0;
+    transform: rotate(180deg);
+    top: 87px;
+    left: 22px; }
 
 /*# sourceMappingURL=vampire.css.map */
