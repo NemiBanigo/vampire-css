@@ -23,6 +23,7 @@ body{
     background: -o-linear-gradient(to right, #111a2d,#5E7B9B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background: -moz-linear-gradient(to bottom, #111a2d,#5E7B9B);
     box-shadow: inset 0 0 33px #04032B;
+    z-index: 99999999;
 }
 
 .vampire-box__bg{
@@ -49,10 +50,11 @@ body{
             bottom: -10px;
             left: 40px;
             transform: rotate(-60deg);
-            transform-origin: left bottom;
-            left: 70px;
-            bottom: 0px;
+            transform-origin: right bottom;
+            left: 56px;
+            bottom: 14px;
             transition: all ease 0.7s;
+            animation: leftwing 0.7s linear infinite alternate;
         }
         .bat__body{
             position: absolute;
@@ -101,6 +103,7 @@ body{
             left: 82px;
             bottom: 15px;
             transition: all ease 0.7s;
+             animation: rightwing 0.7s linear infinite alternate;
         }
         
     }
@@ -108,13 +111,20 @@ body{
         &.bat--two{
           left: 22px;
          top: 110px;  
+        
         }
         &.bat--three{
           left: 213px;
-         top: 126px;  
+         top: 126px; 
+          animation: shake 0.7s linear infinite alternate; 
+        }
+        &.bat--four{
+            left: 116px;
+            top: 84px;
         }
     }
     .vampire{
+        top: 80px;
         .vampire__hair{
             background-color:#212129;
             width: 126px;
@@ -159,6 +169,7 @@ body{
         }  
         .vampire__face{
             background-color: #DBDBDB;
+            box-shadow: 0 0 3px  #212129;
             width: 80px;
             height: 106px;
             border-radius: 50px;
@@ -255,7 +266,7 @@ body{
             .vampire__mouth{
              .lip{  
                 &.lip--top{
-                    top: 7px;
+                    top: 8px;
                     left: 0px;
                 } 
                 .upper-lip{
@@ -264,6 +275,20 @@ body{
                     border-top-right-radius: 100%;
                     height: 0px;
                     width: 0px;
+                    z-index: 3;
+                    &:before{
+                        content: ' ';
+                        width: 0;
+                        height: 0;
+                        border-left: 4px solid transparent;
+                        border-right: 4px solid transparent;
+                        border-bottom: 10px solid #929290;
+                        transform: rotate(180deg);
+                        position: absolute;
+                        left: 4px;
+                        top: 9px;
+                        z-index: 9;
+                    }
                     &.upper-lip--left{
                         top: 70px;
                         left: 21px;
@@ -286,10 +311,70 @@ body{
                  left:22px;
 
                 }
-            }            
+            }    
             }
 
         }
-}   }
+        .vampire__neck{
+            height: 40px;
+            width: 40px;
+            background-color: #DBDBDB;
+            top: 90px;
+            left: 20px;
+            z-index: -1;
+            
+
+        }
+}   
+    .vampire__shoulders{
+        height: 120px;
+        width: 120px;
+        background-color: #DBDBDB;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        top: 343px;
+        left: 205px;
+    }
+    .vampire__dress{
+        border-bottom: 56px solid #880901;
+        border-left: 113px solid transparent;
+        border-top-right-radius: 10px;
+        height: 0px;
+        width: 0px;
+        top: 350px;
+        left: 212px;
     
+        &.vampire__dress--right{
+            border-bottom: 56px solid #880901;
+            border-right: 113px solid transparent;
+            border-top-left-radius: 10px;
+            height: 0px;
+            width: 0px;
+            top: 350px;
+            left: 204px;
+            border-left: none;
+        }
+    }
+    }
     
+
+    
+ @keyframes leftwing{
+     0% {
+         transform: rotate(-25deg);
+
+     }
+     100% {
+         transform: rotate(-60deg);
+     }
+ }
+
+@keyframes rightwing{
+   0% {
+        transform: rotate(25deg);
+    }
+    100% {
+        transform:rotate(60deg);
+    }
+}
+
